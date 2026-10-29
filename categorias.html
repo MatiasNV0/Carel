@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Catálogo de Productos | Carel SRL</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "border-subtle": "#E5E7EB",
+            "primary": "#0B1528",
+            "primary-light": "#1E293B",
+            "secondary": "#E05315",
+            "secondary-hover": "#C8430B",
+            "surface-technical": "#F8FAFC",
+            "text-muted": "#64748B",
+            "fischer-red": "#D32F2F",
+            "py-blue": "#0F52BA"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-slate-200">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+      <!-- Logo Carel SRL -->
+      <a class="flex items-center gap-3 shrink-0 focus:outline-none" href="index.html">
+        <img alt="Carel SRL" class="h-9 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpDfJggaIG1TLSvSrqLfGXtp3Qig6Ekoi6GJ85ZP3ChD-n6YAUtaFfb4FVrHs3V7S2CLxqZMtGbxxgPcOwanTeVqOy07k3tzbNqn6Jnl58r6dW1hHgXZPfh26G6C_T0iUS7GBOMsugd2kG7fbER5b0XRVS-ibmakUMuumJRIqW2V_o6ZMWnV3MieAOT9ucu3mGU-BlrFnBVeIvztgVnGDvil-jaMRX33y4XGBvrkR9F7qcKXMi03a5NXYXcfmwLNR">
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a class="hover:text-primary transition-colors" href="../home/code.html">Inicio</a>
+        <a class="text-primary font-semibold transition-colors" href="#catalogo">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="../contacto/code.html">Contacto</a>
+      </nav>
+
+      <!-- Buscador & CTA -->
+      <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block w-60">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
+          <input
+            class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+            id="header-search" placeholder="Buscar medidas, normas..." type="text">
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
+          href="index.html#contacto">
+          <span>Cotizar</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <!-- ==================== TÍTULO DE PÁGINA ==================== -->
+    <section class="pt-14 pb-10 bg-white border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Catálogo
+              General</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2">Catálogo de Productos</h1>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 text-sm font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all"
+              href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20consultar%20por%20un%20pedido%20mayorista"
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-emerald-600 text-[20px]">chat</span>
+              <span>Atención Comercial WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <!-- Aviso -->
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-amber-50/70 border border-amber-200/80">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-amber-700 text-[20px] shrink-0">info</span>
+            <p class="text-xs sm:text-sm text-amber-900 font-semibold">¿No encontrás la pieza que buscás?</p>
+          </div>
+          <a class="text-xs font-semibold text-amber-900 hover:text-amber-950 inline-flex items-center gap-1 shrink-0 group transition-colors"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20busco%20una%20pieza%20especial"
+            rel="noopener noreferrer" target="_blank">
+            <span>Consultar pieza</span>
+            <span
+              class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BARRA DE HERRAMIENTAS ==================== -->
+    <section class="py-5 border-b border-border-subtle bg-white/95 backdrop-blur-md sticky top-20 z-30">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <div class="relative flex-1 max-w-md">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+              id="catalog-search" placeholder="Buscar categoría, código o norma..." type="text">
+          </div>
+          <div class="flex items-center justify-between sm:justify-end gap-5 text-xs text-slate-500">
+            <div class="flex items-center gap-2 font-mono text-[11px]">
+              <span class="text-slate-400 uppercase tracking-wider">Ver:</span>
+              <button class="px-2 py-1 rounded hover:text-slate-900 transition-colors">31</button>
+              <span class="text-slate-300">|</span>
+              <button class="px-2 py-1 rounded hover:text-slate-900 transition-colors">62</button>
+              <span class="text-slate-300">|</span>
+              <button class="px-2 py-1 rounded bg-slate-100 text-slate-900 font-semibold">Todo (12)</button>
+            </div>
+            <div class="h-4 w-px bg-slate-200 hidden sm:block"></div>
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+              <button aria-label="Vista cuadrícula" class="p-1 rounded bg-white text-slate-900 shadow-xs transition-all"
+                id="btn-grid" onclick="setViewMode('grid')">
+                <span class="material-symbols-outlined text-[18px] block">grid_view</span>
+              </button>
+              <button aria-label="Vista lista" class="p-1 rounded text-slate-500 hover:text-slate-900 transition-all"
+                id="btn-list" onclick="setViewMode('list')">
+                <span class="material-symbols-outlined text-[18px] block">view_list</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATEGORÍAS ==================== -->
+    <section class="py-16 bg-slate-50 border-b border-border-subtle" id="catalogo">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="catalog-grid">
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Bulonería"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1227 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Bulonería</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="../catalogo - subcategorias/code.html">
+                <span>Consultar catálogo de bulonería</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tuercas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbj5IigRgdhRtpK-dYzsgDz98xKfmjbhOfs6wA9_tDxbD0Dy-s-WasUO6zkUCHj4Z5ihXVVegtPj08nuhUDnpQg0-J-FZKLGTKenxlEKnNodOAmc4IrEqwmwpOtHS7tvf5VdHGaNJTW8pqSJdiAh4_1ZPfuEsRkgR45irVpGBsxOVQat-cFfZnMFk3mSyx4RFZIsAsY_BidoUZkSL5u4wtC17Wapo4BKM1lwOVSkzy4Ckg0mpYYhTDymjab2k9I43_1s8">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">230 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tuercas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de tuercas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Arandelas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEE20xCOyU3zWzw20X_4lYIfwV0Asr_ToC9yuC7ITET0jcvOYM-uG69xMRllwL0PrKDFr4Y0PY9ti2QOnvd0Ftnol3ex-1bbCGC0iE25hoDETytXs7ezQ5DRYJ34Cgfginx55-mBX4kpTko1pDzV1SDHGACvEnb2qX_iCvOwJkVO61TrSntzoPNuMOw_WSxdvCCyyA62jQlbFlhO8G2zELHoliLjJaIZ6M9Bn7iFpVAdPy03llwcsv0J0infxmGD5PDA">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">64 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Arandelas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de arandelas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tornillos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD79iOq5N7PdFpwAbeKhYtpR_nRFAB552qt6mEcp6RuxUBWiATP0e2poRdw1WULsyax60QMoC502m_-LxE1gpmgRZTIdcPoqrMp4m7u-6DkWf5kCR8Y5Wiabi2IPkdDRxnLdw-d-oZyxQUEGUBMMXai_D0PZcuyT7KbpUykrsSX20nGCkW0WmlC089ZKyZA5fDvPPOUXVPGJ-yroDdKfNnDgfqlqCpTyi5VKHJW7WbjBEG-ZzSu11CJsNBV9LiAasYZNV4">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">118 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tornillos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de tornillos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Varillas Roscadas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKSK1IJW-8tVbDWnKXIIOTQNVocKtFU9FcuU5n5ydhrEJBSYnrEloqheUiJSzAkv0Oz5gE2ZU1LK6p7eFnQcdK5eGDd1HOfYSOoRlk1nq21JPhXlZHsW-ctxzTN-FagiWU2JCWFuW4vTUzzNOH8NrYeNE4KLg2Y8WSynM_iioaiPtuaatGWpbJNARXqvRCpppJtolbkK4fCY0GnrFAlOIY-Wm386Q438u4tVgmpWHERN4J_CzfkLMNYZC3wdk9EH3R3M">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">79 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Varillas Roscadas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de varillas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tirafondos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA17U3tSopR6PvnVgJstUr1PvO4PWwXkA3FXF32GMDxbQN-CofSKkwMVQVGxFWLVD-PPgMirZv1MhwZZbDBXTeLApauLx2qeKLJm_KNyt_10MXJFnMf2kFwmcqTCNd7vt-GyhD4KFsDrbnY5UpFW4g0qBP5FnATSq8n40n8hD3YyLwT63p9IWq6diwhxE_R29yFR4B86jRbMGce5yTwLcNTM5x5sZzPAU7XpENra-fmCqXDFGqd_3LrrYwxZJZI7Z8dim0">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">58 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tirafondos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de tirafondos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Remaches"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOODNG6YaKdAATTpSHE0lU3aJErF6FkWYDwCpujr12zzfWNU732Lrcu8dQu_-y4CM5K0u8mja7bGektzp0E_WjpVfRPzjhWmAbjI5A95CvPQEm8d-pkNsgwgqZZw5ZBYvfdnVf79DiWHXkNUm7t-rDPjkf4YheCvurshFEA33qtiv_MBmZvqGkJxUcn9bqYDZ4t95dmkdGsUlwUJLH5-tPB1YtvT7LlPr0fN61dYIOS-HHun3_Y5Foaq0fcw1xrPz8JfU">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1 artículo</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Remaches</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de remaches</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Clavos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAkwYdZccLIzd2iI9QjveqoUs1JgD-_kRvXeBBdsDoOUERQSM2lHg6AOuTMLhz3Bb_BP_Tm8zrjP2DvXyyhRB9LReYArfSu4oMFhWvBxO3RdBp6HMEKvl63kPw-CyCjo3ntRcCv3IUWHepy3n27Fqz1i23s4lGxF0rViKCe0B2i0sP7GxowiKioZ7XbP3l5J6x7_fnDwovsZ197UYaxGYkNu30zNKlqyHndrNdRJKct2w3lybJxGrYC4uk5KJgROLVJfY">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">3 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Clavos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de clavos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Alemites"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx1fGvS07y66Nu-dgdDVfB382l59X7If4OMsjwi8wEIoul5QGKvnwebMustu4gIm8Rf-mwx1WHMO9q_IzgFg5P2eCOhXRAmgOhp5kkNhkPKWMLD3smTODKkIHgSQHyZ80FY7vGO5_Wsl445BLraRHYSqohQgkUWhFCx26HpiMFHNfwe_aTiJ78CQymgpls3WUtUdK_DsTGEPTV1h8IGVgOtOweGLYzrY_tGWmVM8YH8Gn1EQpYFMoerHbKTMwhsfeOcpQ">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1 artículo</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Alemites</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de alemites</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Ganchos J"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7R0sUUtdiGtoE9bVDcLYzbhmFuw_7SMV33jZd1J4DOOk_4J7M8yhi2Lz2t8g28oxbAwpRdXb1d43155eRb3Q_VD1nkf3bPy8UJ6NtV0TwxGb5EPGOCZULEkOnDqG8LWWesfBYnvHNbjJZ4D_s3HY9gvzbb9urbfG6F1vpkNq6-9lHOMpIjWIdvpfkgIYDZwlb-L74sdnz3EPS147ojiWZTw0uW0d5Fx3TFoKeHenSJITDJniVpadd8bFIQsC8QF7ywWc">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">2 artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Ganchos J</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de ganchos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Precintos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyS9L0L6HuPFe6Xk2HqRiERLDWBBi-Y0Z5-TAqD0yfKSrVNuSDQ0UvzxTSRxd4LrXJ57yCefbRJ_G3yoMf60pEmjTa4awKjanFnsTqBLzzAU5XfRjww276hkprBoTa8GL42ZNQPlwPai7MK33qlNq-vB-EbsspTYtU3ByRDULQseft9x8NSRy4A5UuxPa9medLyaKFMzWI6zAjXSJYigQ9sw-HceYJXsRiCQMSJoJwwl5N-NunByijaFpAQFMmfkvo0Ro">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1 artículo</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Precintos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de precintos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+          <article
+            class="category-card group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="card-img-wrap h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tarugos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzY6ckG3T6NpRpjlxIp4c5xMgmBid0r_EfXdlaKHkGphUGxCRqYBts1nY995cLNi5Ke4zGKDjjE427WjC6HQQwKiEOjjgMk7pClqBshVG1ksiXlFJ_zuh-_6IgF-MgjYPSwGsZ5K8M3JbES46_8hFcUz7qxEn7OTQkaUv8DvvY-OPePHSA1seyXhtKfJDPKce3NdSQ_X0_LKPxKsJObJ38qkdQfe-9Z3XGXHlUdy8C0VlysKjS34EMLFMGjDkt252WnMc">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1 artículo</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tarugos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="index.html#contacto">
+                <span>Consultar catálogo de tarugos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-border-subtle py-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Brand & Description -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <img alt="Carel SRL" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzdYPgfTQPHIZmNNrVmq9ddPJ2MIP1TSjep_8jZS39ZLL1s5hgvHT7n8zhdZKpoDNMumGCzYYVO55ElzYq3KqGp_hy9lTyQUzr8rIKlfzW4hzirO5Tta3m94WEL8L-prSG1M197w0c_zS9NpafsaV8NvkyozW41pBxMEhACfW_9VLN5ms7RsJtWS3cFRPjziF6pecstdjeyyemTlIYC8Qwp_yf2ABuHiNgvoSTcYI9hBo1FNBsMw4FDs3E0zN3hbX">
+        <p class="text-xs text-slate-500 max-w-sm text-center md:text-left">
+          45 años acompañando a la industria nacional.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
+        <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="#catalogo">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <!-- Copyright -->
+      <div class="text-xs text-slate-400 text-center md:text-right">
+        © 2026 Carel SRL. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20hacer%20una%20consulta%20comercial"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z">
+      </path>
+    </svg>
+  </a>
+
+  <script>
+    function setViewMode(mode) {
+      const grid = document.getElementById('catalog-grid');
+      const btnGrid = document.getElementById('btn-grid');
+      const btnList = document.getElementById('btn-list');
+      const cards = document.querySelectorAll('.category-card');
+      const on = 'p-1 rounded bg-white text-slate-900 shadow-xs transition-all';
+      const off = 'p-1 rounded text-slate-500 hover:text-slate-900 transition-all';
+
+      if (mode === 'list') {
+        grid.className = 'flex flex-col gap-4';
+        btnList.className = on;
+        btnGrid.className = off;
+        cards.forEach(card => {
+          card.classList.remove('flex-col');
+          card.classList.add('flex-row', 'items-center', 'p-4', 'gap-6');
+          const img = card.querySelector('.card-img-wrap');
+          img.classList.remove('h-48');
+          img.classList.add('h-24', 'w-36', 'shrink-0', 'rounded-lg');
+          const text = card.lastElementChild;
+          text.classList.remove('p-6');
+          text.classList.add('p-0', 'w-full');
+        });
+      } else {
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+        btnGrid.className = on;
+        btnList.className = off;
+        cards.forEach(card => {
+          card.classList.add('flex-col');
+          card.classList.remove('flex-row', 'items-center', 'p-4', 'gap-6');
+          const img = card.querySelector('.card-img-wrap');
+          img.classList.add('h-48');
+          img.classList.remove('h-24', 'w-36', 'shrink-0', 'rounded-lg');
+          const text = card.lastElementChild;
+          text.classList.add('p-6');
+          text.classList.remove('p-0', 'w-full');
+        });
+      }
+    }
+
+    // Búsqueda instantánea (buscador de la barra y del header)
+    function filterCards(q) {
+      q = q.toLowerCase().trim();
+      document.querySelectorAll('.category-card').forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    }
+    ['catalog-search', 'header-search'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('input', e => {
+        filterCards(e.target.value);
+        ['catalog-search', 'header-search'].forEach(o => {
+          const other = document.getElementById(o);
+          if (other && other !== e.target) other.value = e.target.value;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

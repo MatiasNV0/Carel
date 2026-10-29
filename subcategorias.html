@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bulonería - Catálogo de Productos | Carel SRL</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "border-subtle": "#E5E7EB",
+            "primary": "#0B1528",
+            "primary-light": "#1E293B",
+            "secondary": "#E05315",
+            "secondary-hover": "#C8430B",
+            "surface-technical": "#F8FAFC",
+            "text-muted": "#64748B",
+            "fischer-red": "#D32F2F",
+            "py-blue": "#0F52BA"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+    }
+
+    #product-list.is-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+    #product-list.is-grid .product-row { flex-direction: column; padding: 1.25rem; gap: 1rem; text-align: center; }
+    #product-list.is-grid .product-img { width: 100%; height: 10rem; }
+    #product-list.is-grid .product-body { flex: none; justify-content: center; }
+    #product-list.is-grid .product-link { justify-content: center; }
+    #product-list.is-grid .link-text { display: inline; }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-slate-200">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+      <!-- Logo Carel SRL -->
+      <a class="flex items-center gap-3 shrink-0 focus:outline-none" href="index.html">
+        <img alt="Carel SRL" class="h-9 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpDfJggaIG1TLSvSrqLfGXtp3Qig6Ekoi6GJ85ZP3ChD-n6YAUtaFfb4FVrHs3V7S2CLxqZMtGbxxgPcOwanTeVqOy07k3tzbNqn6Jnl58r6dW1hHgXZPfh26G6C_T0iUS7GBOMsugd2kG7fbER5b0XRVS-ibmakUMuumJRIqW2V_o6ZMWnV3MieAOT9ucu3mGU-BlrFnBVeIvztgVnGDvil-jaMRX33y4XGBvrkR9F7qcKXMi03a5NXYXcfmwLNR">
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a class="hover:text-primary transition-colors" href="../home/code.html">Inicio</a>
+        <a class="text-primary font-semibold transition-colors" href="../catalogo - categorias/code.html">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="../contacto/code.html">Contacto</a>
+      </nav>
+
+      <!-- Buscador & CTA -->
+      <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block w-60">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
+          <input
+            class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+            placeholder="Buscar medidas, normas..." type="text">
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
+          href="index.html#contacto">
+          <span>Cotizar</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <!-- ==================== TÍTULO DE PÁGINA ==================== -->
+    <section class="pt-10 pb-10 bg-white border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+          <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+          <span class="text-slate-300">/</span>
+          <a class="hover:text-primary transition-colors" href="catalogo.html">Catálogo</a>
+          <span class="text-slate-300">/</span>
+          <span class="text-slate-800 font-medium">Bulonería</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Subcategoría
+              Especializada</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2">Bulonería</h1>
+          </div>
+          <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 text-sm font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all self-start md:self-end"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20consultar%20por%20buloner%C3%ADa"
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-emerald-600 text-[20px]">chat</span>
+            <span>Atención Comercial WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BARRA DE HERRAMIENTAS ==================== -->
+    <section class="py-5 border-b border-border-subtle bg-white/95 backdrop-blur-md sticky top-20 z-30">
+      <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+          <button aria-label="Vista cuadrícula" class="p-1 rounded text-slate-500 hover:text-slate-900 transition-all"
+            id="btn-grid" onclick="setViewMode('grid')" type="button">
+            <span class="material-symbols-outlined text-[18px] block">grid_view</span>
+          </button>
+          <button aria-label="Vista lista" class="p-1 rounded bg-white text-slate-900 shadow-xs transition-all"
+            id="btn-list" onclick="setViewMode('list')" type="button">
+            <span class="material-symbols-outlined text-[18px] block">view_list</span>
+          </button>
+        </div>
+        <div class="flex items-center gap-2 font-mono text-[11px]">
+          <span class="text-slate-400 uppercase tracking-wider">Ver:</span>
+          <button class="px-2 py-1 rounded hover:text-slate-900 transition-colors">31</button>
+          <span class="text-slate-300">|</span>
+          <button class="px-2 py-1 rounded hover:text-slate-900 transition-colors">62</button>
+          <span class="text-slate-300">|</span>
+          <button class="px-2 py-1 rounded bg-slate-100 text-slate-900 font-semibold">Todo (7)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LISTADO ==================== -->
+    <section class="py-16 bg-slate-50 border-b border-border-subtle" id="catalogo">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col gap-3" id="product-list">
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón hexagonal 8.8"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjczdMwrbcL89JorhMFZLpH0XJTywxEUfPJDxgKqQoL_BenWkXPQUuXMkPTUb75udnUGlvWQwYYx2U9XFG4SJGLI7sIv5hHxANHQvhYqsFKvGWi8V9XIfYfbI5mF2DfziJbL74IFQ3ij6CoPM4HShwfGJQ65VuM-bTNIiEM6FbPdycIXAk8kxWOvc8gbyzSPH4CNtzepvQsN_PKq8OKIGtc_iU8PkM3HbMErldt0dly9qge--zvQ">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón hexagonal 8.8 <span class="text-slate-400 font-mono font-medium text-sm">(428)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="../catalogo - productos/code.html">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón hexagonal grado 5"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiPTbrNmSdUQBcOKRgaARN8NRyl7qIACMRC-okO0gWaNkMgADf70wy5xkiNURB3qOPMyM0QlgKbcqZJ8770oQZlnvGHM9R0Ha9dMfx2RAbo4q1KAscORnXNIWohsqPcWK6rGCVFvNmnsNG0KLmPowzuNE7eMOCjkQ8Q0zio2dS2C6zEwzV_mo4NKukY1ZY7GJoBZ9iYe-kNV8jk7N2I6-kPuix9K2FtHmusYMxefTexgHOIyxI80">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón hexagonal grado 5 <span class="text-slate-400 font-mono font-medium text-sm">(395)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-grado5">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón hexagonal grado 2"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcR0WqJfN9qfzPueM3IHu253vpHvN_D5xcB6_RFeX--6qa4lKbcVr1czrPNT5jSU_JEhmQn-RGqHmMXeDK-htsx6SfejSu_qtb4QIwP2b1-9LdKknUB_QnNm3Vj0ypSgwii1wWudjRwynGUNT-jZNz5BQ6uHW0qyGpTt2Z3EXNGFrNwk-hU_HPkRLxuSVg2bsheJpa1KjZ2xU2RrVJLNGhl2oSkBC6m-VF_bv18i01r1UDYqpxaKE">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón hexagonal grado 2 <span class="text-slate-400 font-mono font-medium text-sm">(246)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-grado2">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón cabeza redonda cuello cuadrado"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu41pg8bKyRUTTieNb1WG5jj8pkMmsZh6sxBTwCASB7AFxcIrWaI05fCRddcctGqkwLwiGT-ZnWz2wSEQe6QC4IR5I9GI2nRhdduXPeYr2lTgTK-WeXWDtvXMJ04hPH177t8MGVwV4s_GOz6FSf-ulbfV4pQaIEIBccZhVkLAFl9l7TiAekXOKOnRzjvJREH_Lwaxq0cShHfImoAZWw2mHMViMdVrDtUWiCaJyvQAspQB7ojK7e0c">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón cabeza redonda cuello cuadrado <span class="text-slate-400 font-mono font-medium text-sm">(146)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-cuellocuadrado">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Prisionero cabeza cuadrada"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Prisionero cabeza cuadrada <span class="text-slate-400 font-mono font-medium text-sm">(9)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-cuellocuadrado">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón moleteado"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu41pg8bKyRUTTieNb1WG5jj8pkMmsZh6sxBTwCASB7AFxcIrWaI05fCRddcctGqkwLwiGT-ZnWz2wSEQe6QC4IR5I9GI2nRhdduXPeYr2lTgTK-WeXWDtvXMJ04hPH177t8MGVwV4s_GOz6FSf-ulbfV4pQaIEIBccZhVkLAFl9l7TiAekXOKOnRzjvJREH_Lwaxq0cShHfImoAZWw2mHMViMdVrDtUWiCaJyvQAspQB7ojK7e0c">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón moleteado <span class="text-slate-400 font-mono font-medium text-sm">(2)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-cuellocuadrado">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+          <article
+            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+              <img alt="Bulón de rueda"
+                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
+            </div>
+            <div class="product-body flex-1 min-w-0 flex items-center">
+              <h2 class="text-base font-semibold text-primary">
+                Bulón de rueda <span class="text-slate-400 font-mono font-medium text-sm">(1)</span>
+              </h2>
+            </div>
+            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+              href="#medidas-cuellocuadrado">
+              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+            </a>
+          </article>
+        </div>
+
+        <!-- Aviso -->
+        <div
+          class="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-amber-50/70 border border-amber-200/80">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-amber-700 text-[20px] shrink-0">info</span>
+            <p class="text-xs sm:text-sm text-amber-900 font-semibold">¿No encontrás la medida especial, material inoxidable o norma específica que buscás?</p>
+          </div>
+          <a class="text-xs font-semibold text-amber-900 hover:text-amber-950 inline-flex items-center gap-1 shrink-0 group transition-colors"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20busco%20una%20pieza%20especial"
+            rel="noopener noreferrer" target="_blank">
+            <span>Consultar pieza a medida</span>
+            <span
+              class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-border-subtle py-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Brand & Description -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <img alt="Carel SRL" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpDfJggaIG1TLSvSrqLfGXtp3Qig6Ekoi6GJ85ZP3ChD-n6YAUtaFfb4FVrHs3V7S2CLxqZMtGbxxgPcOwanTeVqOy07k3tzbNqn6Jnl58r6dW1hHgXZPfh26G6C_T0iUS7GBOMsugd2kG7fbER5b0XRVS-ibmakUMuumJRIqW2V_o6ZMWnV3MieAOT9ucu3mGU-BlrFnBVeIvztgVnGDvil-jaMRX33y4XGBvrkR9F7qcKXMi03a5NXYXcfmwLNR">
+        <p class="text-xs text-slate-500 max-w-sm text-center md:text-left">
+          45 años acompañando a la industria nacional.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
+        <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="catalogo.html">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <!-- Copyright -->
+      <div class="text-xs text-slate-400 text-center md:text-right">
+        © 2026 Carel SRL. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20hacer%20una%20consulta%20comercial"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z">
+      </path>
+    </svg>
+  </a>
+
+  <script>
+    function setViewMode(mode) {
+      const list = document.getElementById('product-list');
+      const on = 'p-1 rounded bg-white text-slate-900 shadow-xs transition-all';
+      const off = 'p-1 rounded text-slate-500 hover:text-slate-900 transition-all';
+      list.classList.toggle('is-grid', mode === 'grid');
+      document.getElementById('btn-grid').className = mode === 'grid' ? on : off;
+      document.getElementById('btn-list').className = mode === 'list' ? on : off;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Carel SRL | 45 años acompañando a la industria nacional</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "border-subtle": "#E5E7EB",
+            "primary": "#0B1528",
+            "primary-light": "#1E293B",
+            "secondary": "#E05315",
+            "secondary-hover": "#C8430B",
+            "surface-technical": "#F8FAFC",
+            "text-muted": "#64748B",
+            "fischer-red": "#D32F2F",
+            "py-blue": "#0F52BA"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-slate-200">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+      <!-- Logo Carel SRL -->
+      <a class="flex items-center gap-3 shrink-0 focus:outline-none" href="#">
+        <img alt="Carel SRL" class="h-9 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpDfJggaIG1TLSvSrqLfGXtp3Qig6Ekoi6GJ85ZP3ChD-n6YAUtaFfb4FVrHs3V7S2CLxqZMtGbxxgPcOwanTeVqOy07k3tzbNqn6Jnl58r6dW1hHgXZPfh26G6C_T0iUS7GBOMsugd2kG7fbER5b0XRVS-ibmakUMuumJRIqW2V_o6ZMWnV3MieAOT9ucu3mGU-BlrFnBVeIvztgVnGDvil-jaMRX33y4XGBvrkR9F7qcKXMi03a5NXYXcfmwLNR">
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a class="text-primary font-semibold transition-colors" href="#">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="../catalogo - categorias/code.html">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="../contacto/code.html">Contacto</a>
+      </nav>
+
+      <!-- Buscador & CTA -->
+      <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block w-60">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
+          <input
+            class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+            placeholder="Buscar medidas, normas..." type="text">
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
+          href="#contacto">
+          <span>Cotizar</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <!-- ==================== HERO SECTION MODIFICADA ==================== -->
+    <section class="relative bg-white pt-14 pb-20 border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Textos y Llamados de Acción -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary leading-[1.15] max-w-2xl mb-5">
+              45 años acompañando a la industria nacional
+            </h1>
+            <p class="text-lg text-slate-600 font-normal leading-relaxed max-w-xl mb-9">
+              Abastecemos a fabricantes con stock permanente y respuesta inmediata. Cuando la línea no puede parar, la
+              mercadería está.
+            </p>
+
+            <!-- Acciones -->
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+              <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-slate-800 transition-all shadow-sm"
+                href="#catalogo">
+                <span>Explorar Catálogo de Productos</span>
+                <span class="material-symbols-outlined text-[18px]">east</span>
+              </a>
+              <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-slate-300 text-slate-700 text-sm font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all"
+                href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20consultar%20disponibilidad"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px]">chat</span>
+                <span>Consultá disponibilidad</span>
+              </a>
+            </div>
+
+            <!-- Datos Rápidos Clave -->
+            <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-100 w-full max-w-xl">
+              <div>
+                <div class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>+45 años</span>
+                  <span class="text-lg">🇦🇷</span>
+                </div>
+                <div class="text-xs text-slate-500 font-medium mt-0.5">Junto a la industria</div>
+              </div>
+              <div>
+                <div class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>Nacional</span>
+                  <span class="text-lg">🚚</span>
+                </div>
+                <div class="text-xs text-slate-500 font-medium mt-0.5">Envíos a todo el país</div>
+              </div>
+              <div>
+                <div class="text-xl sm:text-2xl font-bold text-slate-900">Oficial</div>
+                <div class="text-xs text-slate-500 font-medium mt-0.5">Fischer &amp; Línea PY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen Hero Limpia (sin cuadro/globo superpuesto) -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-md">
+              <img alt="Depósito y Bulonería Industrial Carel SRL"
+                class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh9LvzcRve67-4IDGyYFozu5Rg7VO_U0S9z8mZgDRNUfZlCELHULLuw0itTyn6YdEE5sBfbrw-JoTRQZ-pqrece6lhSCSTc21BqYDEbNU4ARUnGfhcfezAJL14xEAaThWqNS28nAsx87qRufLBDg8N2H6RXxvJ6zKUEcuxjQ7DLvftALfABOsiQMeZQn9IDTYl9jhyiH9XWrVdEmiGzJfGYCKPcA8-654xAj4rrPC07g0lvJHnMSJ9a_W2SEDH0MCk">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NUEVA SECCIÓN: NUESTRO DIFERENCIAL ==================== -->
+    <section class="py-20 bg-slate-50 border-b border-border-subtle" id="diferencial">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Propuesta de
+            Valor</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2 mb-4">
+            Nuestro diferencial
+          </h2>
+          <p class="text-lg text-slate-600 leading-relaxed font-normal">
+            Vender insumos lo hace cualquiera. Lo difícil es estar cuando el fabricante te necesita —
+            y en eso llevamos 45 años.
+          </p>
+        </div>
+
+        <!-- Los 4 Pilares -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Pilar 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-amber-50 text-secondary flex items-center justify-center mb-5 mx-auto">
+                <span class="material-symbols-outlined text-[26px]">support_agent</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Nos llamás y estamos</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Atención directa con personas que conocen tu situación y producción. Sin formularios, sin esperas, sin
+                mesa de ayuda. Consultás y tenés respuesta el mismo día.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-py-blue flex items-center justify-center mb-5 mx-auto">
+                <span class="material-symbols-outlined text-[26px]">local_shipping</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Despacho rápido a todo el país</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Preparamos y despachamos en el día. Coordinamos con tu logística o con la nuestra para que la mercadería
+                llegue cuando <strong>VOS</strong> la necesitás, no cuando nos queda cómodo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-red-50 text-fischer-red flex items-center justify-center mb-5 mx-auto">
+                <span class="material-symbols-outlined text-[26px]">emergency</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Entendemos la urgencia</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Nadie planifica quedarse sin insumos. Se detecta sobre la marcha, con la producción andando y el pedido
+                comprometido. Para ese llamado estamos preparados: confirmamos stock al toque y coordinamos entrega
+                cuanto antes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between">
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-5 mx-auto">
+                <span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Entendemos cómo produce el fabricante</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Sabemos que un faltante de bulones frena una línea entera. Por eso trabajamos con previsibilidad:
+                reposición programada, alternativas técnicas cuando hace falta y seguimiento de tus consumos habituales.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cierre de Sección y CTA WhatsApp -->
+        <div
+          class="mt-12 p-8 bg-white border border-slate-200 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <p class="text-base sm:text-lg font-medium text-slate-800 max-w-2xl text-center">
+            Más de 45 años nos enseñaron que el mejor proveedor no es el que tiene el mejor precio, sino <strong>EL QUE
+              NUNCA TE DEJA PARADO</strong>.
+          </p>
+          <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition-all shadow-sm shrink-0"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20quiero%20hablar%20sobre%20nuestra%20situaci%C3%B3n%20de%20abastecimiento"
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>Hablemos de tu situación →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NUEVA SECCIÓN: NUESTRA HISTORIA ==================== -->
+    <section class="py-24 bg-white border-b border-border-subtle overflow-hidden" id="historia">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Contenido Narrativo & Hitos -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Trayectoria &amp;
+              Compromiso</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2 mb-6">
+              Nuestra historia: cuatro décadas al ritmo de las fábricas
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-8">
+              Carel nació como proveedora de bulones y tuercas autofrenantes para la industria automotriz, un sector
+              donde la precisión y los plazos no admiten errores. Esa exigencia marcó nuestra forma de trabajar:
+              entendemos cómo funciona una línea de producción y lo que cuesta cada hora parada. Hoy abastecemos tanto a
+              pymes en crecimiento como a grandes empresas que exportan, con el mismo nivel de respuesta.
+            </p>
+
+            <!-- Hitos cronológicos breves -->
+            <div class="space-y-6 border-l-2 border-slate-200 pl-6 my-2">
+              <div class="relative">
+                <span
+                  class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-primary border-4 border-white shadow-xs"></span>
+                <span class="font-mono text-xs font-bold text-secondary uppercase tracking-wider">El Origen</span>
+                <h3 class="text-base font-bold text-slate-900 mt-0.5">Formados en la exigencia automotriz</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Empezamos abasteciendo bulonería al sector automotriz, uno de los más rigurosos en calidad y
+                  cumplimiento. Ahí aprendimos que un proveedor industrial vale por su capacidad de respuesta y su
+                  conocimiento técnico.
+                </p>
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-primary border-4 border-white shadow-xs"></span>
+                <span class="font-mono text-xs font-bold text-secondary uppercase tracking-wider">Crecimiento</span>
+                <h3 class="text-base font-bold text-slate-900 mt-0.5">Crecimos junto a nuestros clientes</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Atendimos desde el principio a empresas de todos los tamaños, y muchas de ellas hoy son referentes en
+                  su sector. Al acompañarlas sumamos nuevos rubros y consolidamos nuestro centro logístico en Villa
+                  Luzuriaga, con despachos a todo el país.
+                </p>
+              </div>
+
+              <div class="relative">
+                <span
+                  class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-secondary border-4 border-white shadow-xs"></span>
+                <span class="font-mono text-xs font-bold text-secondary uppercase tracking-wider">Presente</span>
+                <h3 class="text-base font-bold text-slate-900 mt-0.5">Importación directa y fabricación a medida</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Importamos insumos de primera línea y, en alianza con fabricantes locales, desarrollamos piezas
+                  especiales bajo plano para plantas con requerimientos específicos, incluidas empresas que producen
+                  para mercados internacionales.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+              <p class="text-sm font-medium text-slate-700">
+                Más de 40 años como proveedor industrial: stock disponible, respuesta técnica y cumplimiento en cada
+                entrega.
+              </p>
+            </div>
+          </div>
+
+          <!-- Imagen de Referencia Temporal -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-lg w-full group">
+              <!-- IMAGEN DE REFERENCIA: Provisoria hasta recibir la foto definitiva del cliente -->
+              <img alt="Instalaciones y equipo de Carel SRL (Referencia provisoria)"
+                class="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaYinof_gmP9b2Aur8HpSdTAgRDpKPDzt6kuPMyt03hPYrHsC30wL9v-k-ETRyW_kdEzFT2BwDWphB0SeEvgcpD11k_gsQosTwWQdN51oT8c6_7TVH864r8GZtv14ruda_4plQR5FTm_lW4tnpVHBKxZ8YcqTc4JdGe175QfVs3Hh6cLvkdY1fj5VofwIuRpLaKoSvEh84kZNOeh7A42FTA8UnCJCOwE__LLxkx-4RYKRorupr1krt5NTY1kJUGjJ3">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CINTA DE MARCAS ==================== -->
+    <section class="py-14 bg-white border-b border-border-subtle" id="marcas">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-8">
+          <span class="text-xs font-mono uppercase tracking-widest text-slate-500 font-semibold">Marcas y Distribución
+            Oficial</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <!-- Carel SRL -->
+          <div
+            class="bg-slate-50 rounded-xl p-6 border border-slate-200/80 flex flex-col items-center justify-between text-center shadow-xs hover:border-slate-300 transition-colors h-40">
+            <div class="flex-1 flex items-center justify-center w-full px-4">
+              <img alt="Carel SRL" class="h-9 w-auto max-w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuATd5bqW-OH61kQE55cf1jCid1fpuErNwB3CtrK6Cx30CHpMSOWoaDRDTDcjIkPLhN_f5jgmu8QC1JwdzViakwhMMLJemRQbX21dj7zZHe4UvzzWsuWLc2AiC8VnRCCIAuG9p5VKUIIn-RuT123ywMcYk8A-Tu-e1ZmIMlM7AkQJHsQe41AWmQPNymt_MJJK_TYmK-bVVrU5LvQOqDK812wr2b7vPi_FomOu5fYvRPJCz645DKocWy8u3etwpV_C7a3">
+            </div>
+            <span
+              class="text-[11px] font-mono text-slate-600 bg-white px-2.5 py-0.5 rounded border border-slate-200 font-medium">
+              Piezas nacionales <br>
+              Piezas importadas <br>
+              Medidas especiales</span>
+          </div>
+
+          <!-- Fischer -->
+          <div
+            class="bg-slate-50 rounded-xl p-6 border border-slate-200/80 flex flex-col items-center justify-between text-center shadow-xs hover:border-slate-300 transition-colors h-40">
+            <div class="flex-1 flex items-center justify-center w-full px-4">
+              <img alt="Fischer" class="h-8 w-auto max-w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyDr7KJbw-mv2yywD6Q-PsWLaIH76Dj_wc9h3K92FY7m-SrVTVZdSdYaXRNTWwsmYsfWvVYpuKBc_tjo8nzMKvu3xEAlcYIWNlTqy6pL1JrcgM92z4TQI5MlQt2IGKTUD-Sg7lbxDG0p9mmwz0AYr1Xj4890g65ekA0TAuAXj54FvrLxAmoSyhOl_CqUmkRXKLp9hC-NUhFSuqofa9AZnUwagnLOgKVu88yrn6BNEGtXUdpSb2U8sAepZrf7yNcKAd">
+            </div>
+            <span
+              class="text-[11px] font-mono text-fischer-red bg-red-50 px-2.5 py-0.5 rounded font-semibold border border-red-200">Distribuidor
+              Oficial</span>
+          </div>
+
+          <!-- Fijaciones PY -->
+          <div
+            class="bg-slate-50 rounded-xl p-6 border border-slate-200/80 flex flex-col items-center justify-between text-center shadow-xs hover:border-slate-300 transition-colors h-40">
+            <div class="flex-1 flex items-center justify-center w-full px-4">
+              <img alt="Fijaciones PY" class="h-8 w-auto max-w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaB1Ck2tWNYsfhrePNYB3U9KkJNbuIW3aXv1ZjOqsUFryPKIXOfA-ngsXucX9I51_1vt9NbtO_ZpLbI6Wh9xC-tr6rjjxEwDip7M6O_LoUL26yTvaaHBbXmbMP9i1EMM8QERbGqn4DBvLOhLS41D-OXN6KaWiZMcQ67DqEAniAFKCQJyEEkoh0oFwASFFd58GFMwvAmjXs9krTL83TS9L_f96QSpaDjzUittdowomCmGDsQyRPJnmYql0G3rG7QJO8">
+            </div>
+            <span
+              class="text-[11px] font-mono text-py-blue bg-blue-50 px-2.5 py-0.5 rounded font-semibold border border-blue-200">Representación
+              Oficial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATÁLOGO / CATEGORÍAS PRINCIPALES ==================== -->
+    <section class="py-20 bg-slate-50 border-b border-border-subtle" id="catalogo">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Catálogo
+              General</span>
+            <h2 class="text-3xl font-bold tracking-tight text-primary mt-2">Líneas principales de abastecimiento</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 1. Bulonería (1227) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Bulonería"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">1227
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Bulonería</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Bulones hexagonales en calidades 8.8, grado 5 y grado 2, cabeza redonda cuello cuadrado, prisionero,
+                  bulon moleteados y de rueda.
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de bulonería</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Tuercas (230) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tuercas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbj5IigRgdhRtpK-dYzsgDz98xKfmjbhOfs6wA9_tDxbD0Dy-s-WasUO6zkUCHj4Z5ihXVVegtPj08nuhUDnpQg0-J-FZKLGTKenxlEKnNodOAmc4IrEqwmwpOtHS7tvf5VdHGaNJTW8pqSJdiAh4_1ZPfuEsRkgR45irVpGBsxOVQat-cFfZnMFk3mSyx4RFZIsAsY_BidoUZkSL5u4wtC17Wapo4BKM1lwOVSkzy4Ckg0mpYYhTDymjab2k9I43_1s8">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">230
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tuercas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Tuercas autofrenantes, hexagonales standard, torneadas, pesadas e inoxidables, flange, castillo,
+                  ciegas y contratuercas.
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de tuercas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Tornillos (118) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tornillos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD79iOq5N7PdFpwAbeKhYtpR_nRFAB552qt6mEcp6RuxUBWiATP0e2poRdw1WULsyax60QMoC502m_-LxE1gpmgRZTIdcPoqrMp4m7u-6DkWf5kCR8Y5Wiabi2IPkdDRxnLdw-d-oZyxQUEGUBMMXai_D0PZcuyT7KbpUykrsSX20nGCkW0WmlC089ZKyZA5fDvPPOUXVPGJ-yroDdKfNnDgfqlqCpTyi5VKHJW7WbjBEG-ZzSu11CJsNBV9LiAasYZNV4">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">118
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tornillos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Tornillos fix para madera, autoperforantes, Allen (cabeza cilíndrica, fresada, botón y sin cabeza),
+                  cabeza fijadora Phillips, tanque, parker e inoxidables.
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de tornillos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Arandelas (64) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Arandelas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEE20xCOyU3zWzw20X_4lYIfwV0Asr_ToC9yuC7ITET0jcvOYM-uG69xMRllwL0PrKDFr4Y0PY9ti2QOnvd0Ftnol3ex-1bbCGC0iE25hoDETytXs7ezQ5DRYJ34Cgfginx55-mBX4kpTko1pDzV1SDHGACvEnb2qX_iCvOwJkVO61TrSntzoPNuMOw_WSxdvCCyyA62jQlbFlhO8G2zELHoliLjJaIZ6M9Bn7iFpVAdPy03llwcsv0J0infxmGD5PDA">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">64
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Arandelas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Arandelas grower, planas, cónicas, biseladas y estrella.
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de arandelas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Varillas roscadas (79) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Varillas Roscadas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKSK1IJW-8tVbDWnKXIIOTQNVocKtFU9FcuU5n5ydhrEJBSYnrEloqheUiJSzAkv0Oz5gE2ZU1LK6p7eFnQcdK5eGDd1HOfYSOoRlk1nq21JPhXlZHsW-ctxzTN-FagiWU2JCWFuW4vTUzzNOH8NrYeNE4KLg2Y8WSynM_iioaiPtuaatGWpbJNARXqvRCpppJtolbkK4fCY0GnrFAlOIY-Wm386Q438u4tVgmpWHERN4J_CzfkLMNYZC3wdk9EH3R3M">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">79
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Varillas Roscadas</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de varillas</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Tirafondos (58) -->
+          <div
+            class="group rounded-xl border border-slate-200 hover:border-slate-300 bg-white overflow-hidden transition-all hover:shadow-md flex flex-col">
+            <div class="h-48 bg-slate-100 overflow-hidden relative">
+              <img alt="Tirafondos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA17U3tSopR6PvnVgJstUr1PvO4PWwXkA3FXF32GMDxbQN-CofSKkwMVQVGxFWLVD-PPgMirZv1MhwZZbDBXTeLApauLx2qeKLJm_KNyt_10MXJFnMf2kFwmcqTCNd7vt-GyhD4KFsDrbnY5UpFW4g0qBP5FnATSq8n40n8hD3YyLwT63p9IWq6diwhxE_R29yFR4B86jRbMGce5yTwLcNTM5x5sZzPAU7XpENra-fmCqXDFGqd_3LrrYwxZJZI7Z8dim0">
+              <span
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono px-2.5 py-1 rounded text-slate-800 font-semibold shadow-sm">58
+                artículos</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-primary">Tirafondos</h3>
+                  <span class="text-xs font-mono text-slate-400 font-medium"></span>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                </p>
+              </div>
+              <a class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                href="#contacto">
+                <span>Consultar catálogo de tirafondos</span>
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN DE CONTACTO ==================== -->
+    <section class="py-20 bg-white border-b border-border-subtle" id="contacto">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-3xl font-bold tracking-tight text-primary mb-3">Contactanos</h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Si tenés alguna consulta o necesitas un presupuesto personalizado, no dudes en ponerte en contacto con
+            nosotros.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- WhatsApp -->
+          <a class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-400 hover:shadow-sm transition-all group flex flex-col"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20necesito%20un%20presupuesto"
+            rel="noopener noreferrer" target="_blank">
+            <div
+              class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">chat</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-medium mb-1">WhatsApp</span>
+            <span
+              class="text-sm font-semibold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2">ENVIANOS
+              UN WHATSAPP</span>
+            <span class="text-sm text-slate-600 font-mono mt-auto">+54-11-3485-7763</span>
+          </a>
+
+          <!-- Teléfono -->
+          <a class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 hover:shadow-sm transition-all group flex flex-col"
+            href="tel:+541146595506">
+            <div
+              class="w-10 h-10 rounded-lg bg-white text-slate-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">call</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-medium mb-1">Atención
+              Telefónica</span>
+            <span class="text-sm font-semibold text-slate-900 mb-2">HABLEMOS POR TELÉFONO</span>
+            <span class="text-sm text-slate-600 font-mono mt-auto">+54-11-4659-5506</span>
+          </a>
+
+          <!-- Mail -->
+          <a class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 hover:shadow-sm transition-all group flex flex-col"
+            href="mailto:info@carelsrl.com.ar">
+            <div
+              class="w-10 h-10 rounded-lg bg-white text-slate-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">mail</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-medium mb-1">Correo
+              Comercial</span>
+            <span class="text-sm font-semibold text-slate-900 mb-2">ENVIÁNOS UN MAIL</span>
+            <span class="text-sm text-slate-600 font-mono mt-auto truncate">info@carelsrl.com.ar</span>
+          </a>
+
+          <!-- Ubicación -->
+          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col">
+            <div class="w-10 h-10 rounded-lg bg-white text-slate-700 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[22px]">location_on</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-medium mb-1">Ubicación</span>
+            <span class="text-sm font-semibold text-slate-900 mb-2">DÓNDE ESTAMOS</span>
+            <span class="text-xs text-slate-600 leading-relaxed mt-auto">
+              Ombú 270, B1753AYF Villa Luzuriaga, Provincia de Buenos Aires
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-border-subtle py-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Brand & Description -->
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <img alt="Carel SRL" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzdYPgfTQPHIZmNNrVmq9ddPJ2MIP1TSjep_8jZS39ZLL1s5hgvHT7n8zhdZKpoDNMumGCzYYVO55ElzYq3KqGp_hy9lTyQUzr8rIKlfzW4hzirO5Tta3m94WEL8L-prSG1M197w0c_zS9NpafsaV8NvkyozW41pBxMEhACfW_9VLN5ms7RsJtWS3cFRPjziF6pecstdjeyyemTlIYC8Qwp_yf2ABuHiNgvoSTcYI9hBo1FNBsMw4FDs3E0zN3hbX">
+        <p class="text-xs text-slate-500 max-w-sm text-center md:text-left">
+          45 años acompañando a la industria nacional.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
+        <a class="hover:text-primary transition-colors" href="#">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="#catalogo">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Copyright -->
+      <div class="text-xs text-slate-400 text-center md:text-right">
+        © 2026 Carel SRL. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20hacer%20una%20consulta%20comercial"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z">
+      </path>
+    </svg>
+  </a>
+
+</body>
+
+</html>

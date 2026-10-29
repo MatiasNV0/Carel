@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bulón hexagonal 8.8 | Carel SRL</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "border-subtle": "#E5E7EB",
+            "primary": "#0B1528",
+            "primary-light": "#1E293B",
+            "secondary": "#E05315",
+            "secondary-hover": "#C8430B",
+            "surface-technical": "#F8FAFC",
+            "text-muted": "#64748B",
+            "fischer-red": "#D32F2F",
+            "py-blue": "#0F52BA"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-slate-200">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+      <a class="flex items-center gap-3 shrink-0 focus:outline-none" href="index.html">
+        <img alt="Carel SRL" class="h-9 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpDfJggaIG1TLSvSrqLfGXtp3Qig6Ekoi6GJ85ZP3ChD-n6YAUtaFfb4FVrHs3V7S2CLxqZMtGbxxgPcOwanTeVqOy07k3tzbNqn6Jnl58r6dW1hHgXZPfh26G6C_T0iUS7GBOMsugd2kG7fbER5b0XRVS-ibmakUMuumJRIqW2V_o6ZMWnV3MieAOT9ucu3mGU-BlrFnBVeIvztgVnGDvil-jaMRX33y4XGBvrkR9F7qcKXMi03a5NXYXcfmwLNR">
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a class="hover:text-primary transition-colors" href="../home/code.html">Inicio</a>
+        <a class="text-primary font-semibold transition-colors" href="../catalogo - categorias/code.html">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="../contacto/code.html">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <div class="relative hidden lg:block w-60">
+          <span
+            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
+          <input
+            class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+            placeholder="Buscar medidas, normas..." type="text">
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
+          href="index.html#contacto">
+          <span>Cotizar</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <!-- ==================== BREADCRUMB ==================== -->
+    <section class="border-b border-border-subtle bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-3.5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-slate-400">
+          <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+          <span class="text-slate-300">/</span>
+          <a class="hover:text-primary transition-colors" href="catalogo.html">Catálogo</a>
+          <span class="text-slate-300">/</span>
+          <a class="hover:text-primary transition-colors" href="buloneria.html">Bulonería</a>
+          <span class="text-slate-300">/</span>
+          <span class="text-slate-800 font-medium">Bulón hexagonal 8.8</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ==================== CABECERA DEL PRODUCTO ==================== -->
+    <section class="py-14 md:py-16 border-b border-border-subtle bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div class="lg:col-span-8 flex flex-col items-start gap-4">
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Subcategoría Técnica ·
+              Fijaciones Industriales</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary leading-[1.15]">
+              Bulón hexagonal 8.8
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BARRA DE FILTROS ==================== -->
+    <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-border-subtle py-4">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-3 flex-1">
+          <div class="relative w-full sm:w-72">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">tune</span>
+            <input
+              class="w-full pl-10 pr-3 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
+              id="productSearchInput" placeholder="Filtrar medida (ej. M12-1,25-50)..." type="search">
+          </div>
+          <div class="flex items-center gap-1.5 overflow-x-auto py-0.5 text-xs font-mono" id="diameterFilters">
+            <span class="text-slate-400 uppercase tracking-wider pr-1 hidden sm:inline text-[11px]">Diámetro:</span>
+            <button class="filter-btn px-3 py-1 rounded-md bg-primary text-white font-medium transition-all" data-filter="all" type="button">Todos</button>
+            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M8" type="button">M8</button>
+            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M12" type="button">M12</button>
+            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M22" type="button">M22</button>
+            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M24" type="button">M24</button>
+          </div>
+          <div class="hidden lg:flex items-center gap-2 pl-3 border-l border-slate-200 text-xs">
+            <button class="type-btn font-semibold text-primary" data-type="all" type="button">Todo</button>
+            <button class="type-btn text-slate-500 hover:text-primary transition-colors" data-type="total" type="button">Rosca Total</button>
+            <button class="type-btn text-slate-500 hover:text-primary transition-colors" data-type="parcial" type="button">Rosca Parcial</button>
+          </div>
+        </div>
+        <div class="flex items-center justify-between md:justify-end gap-4 text-xs text-slate-500">
+          <span class="font-mono" id="itemCountLabel"></span>
+          <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+            <button aria-label="Vista de cuadrícula" class="p-1 rounded bg-white text-slate-900 shadow-xs transition-all" id="viewGridBtn" type="button">
+              <span class="material-symbols-outlined text-[18px] block">grid_view</span>
+            </button>
+            <button aria-label="Vista de tabla" class="p-1 rounded text-slate-500 hover:text-slate-900 transition-all" id="viewTableBtn" type="button">
+              <span class="material-symbols-outlined text-[18px] block">table_rows</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MEDIDAS (GRILLA / TABLA) ==================== -->
+    <section class="py-14 bg-slate-50 border-b border-border-subtle min-h-[600px]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
+
+        <div class="hidden bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm" id="productTableView">
+          <div class="p-6 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <h4 class="text-base font-semibold text-primary">Tabla técnica completa de medidas en stock</h4>
+              <p class="text-xs text-slate-500 mt-0.5">39 dimensiones homologadas con entrega inmediata.</p>
+            </div>
+            <button
+              class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary border border-slate-300 px-3 py-2 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-all"
+              onclick="exportTableToCSV()" type="button">
+              <span class="material-symbols-outlined text-[16px]">file_download</span>
+              <span>Descargar .CSV</span>
+            </button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 text-slate-500 uppercase font-mono text-[11px] border-b border-slate-200">
+                <tr>
+                  <th class="py-3 px-5">Código / Medida</th>
+                  <th class="py-3 px-5">Diámetro</th>
+                  <th class="py-3 px-5">Paso</th>
+                  <th class="py-3 px-5">Largo</th>
+                  <th class="py-3 px-5">Rosca</th>
+                  <th class="py-3 px-5">Norma</th>
+                  <th class="py-3 px-5">Acabado</th>
+                  <th class="py-3 px-5 text-right">Cotización</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700 font-mono" id="tableBodyRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PILARES ==================== -->
+    <section class="py-20 bg-white border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-secondary flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">inventory_2</span>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">Empaques Industriales</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Cajas cerradas de 50 a 500 unidades según diámetro. Fraccionamiento mayorista disponible para ferreterías
+              industriales y plantas de montaje.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-py-blue flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">local_shipping</span>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">Despacho Inmediato</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Logística integrada con envíos a todo el país. Retiro directo en depósito central en Villa Luzuriaga o
+              entrega programada en obra.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-slate-300 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">verified</span>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">Certificados de Calidad</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Acompañamos cada partida con su respectivo certificado de análisis químico y ensayos mecánicos de tracción
+              conforme a norma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONSULTA A MEDIDA ==================== -->
+    <section class="py-16 bg-slate-50 border-b border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="p-8 bg-white border border-slate-200 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm">
+          <div class="max-w-2xl">
+            <h3 class="text-xl font-bold text-primary tracking-tight">¿No encontrás la medida especial o calidad que buscás?</h3>
+            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+              Fabricamos e importamos bulonería especial bajo plano en calidades 10.9, 12.9 y aceros inoxidables AISI 304 / 316.
+            </p>
+          </div>
+          <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition-all shadow-sm shrink-0"
+            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20busco%20una%20pieza%20especial"
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>Consultar pieza a medida</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-border-subtle py-12 text-slate-600 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex flex-col items-center md:items-start gap-3">
+        <img alt="Carel SRL" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzdYPgfTQPHIZmNNrVmq9ddPJ2MIP1TSjep_8jZS39ZLL1s5hgvHT7n8zhdZKpoDNMumGCzYYVO55ElzYq3KqGp_hy9lTyQUzr8rIKlfzW4hzirO5Tta3m94WEL8L-prSG1M197w0c_zS9NpafsaV8NvkyozW41pBxMEhACfW_9VLN5ms7RsJtWS3cFRPjziF6pecstdjeyyemTlIYC8Qwp_yf2ABuHiNgvoSTcYI9hBo1FNBsMw4FDs3E0zN3hbX">
+        <p class="text-xs text-slate-500 max-w-sm text-center md:text-left">
+          45 años acompañando a la industria nacional.
+        </p>
+      </div>
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
+        <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="catalogo.html">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="text-xs text-slate-400 text-center md:text-right">
+        © 2026 Carel SRL. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20necesito%20cotizar%20bulones%20hexagonales%20calidad%208.8"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z">
+      </path>
+    </svg>
+  </a>
+
+  <script>
+    // Base de datos de las 39 medidas
+    const catalogDatabase = [
+      ['M8','1,25',20,'Total'],['M8','1,25',25,'Total'],['M8','1,25',30,'Total'],['M8','1,25',35,'Total'],
+      ['M8','1,25',40,'Total'],['M8','1,25',45,'Total'],['M8','1,25',50,'Parcial'],['M8','1,25',60,'Parcial'],
+      ['M8','1,25',70,'Parcial'],['M8','1,25',80,'Parcial'],['M8','1,25',100,'Total'],['M8','1,25',110,'Total'],
+      ['M8','1,25',120,'Total'],['M12','1,25',25,'Total'],['M12','1,25',30,'Total'],['M12','1,25',35,'Total'],
+      ['M12','1,25',40,'Parcial'],['M12','1,25',50,'Parcial'],['M12','1,25',60,'Parcial'],['M12','1,25',70,'Parcial'],
+      ['M12','1,25',80,'Parcial'],['M12','1,25',90,'Parcial'],['M12','1,25',100,'Parcial'],['M12','1,25',110,'Parcial'],
+      ['M12','1,25',120,'Parcial'],['M12','1,25',130,'Parcial'],['M22','1,5',60,'Parcial'],['M22','1,5',80,'Parcial'],
+      ['M22','1,5',100,'Parcial'],['M22','1,5',120,'Parcial'],['M22','1,5',150,'Parcial'],['M22','1,5',170,'Parcial'],
+      ['M24','2,0',50,'Total'],['M24','2,0',65,'Parcial'],['M24','2,0',80,'Parcial'],['M24','2,0',100,'Parcial'],
+      ['M24','2,0',120,'Parcial'],['M24','2,0',150,'Parcial'],['M24','2,0',170,'Parcial']
+    ].map(([diam, paso, largo, rosca]) => {
+      const total = rosca === 'Total';
+      const pasoSku = paso === '2,0' ? '2' : paso;
+      return {
+        sku: `${diam}-${pasoSku}-${largo}`, diam, paso, largo, rosca,
+        norma: total ? 'DIN 933' : 'DIN 931', acabado: 'DICRO',
+        code: 'CR-88-' + diam.slice(1).padStart(2, '0') + String(largo).padStart(3, '0')
+      };
+    });
+
+    const WA = '541134857763';
+
+    // Grilla de tarjetas
+    const productGrid = document.getElementById('productGrid');
+    productGrid.innerHTML = catalogDatabase.map(i => {
+      const total = i.rosca === 'Total';
+      const title = `BULON HEXAGONAL ${total ? 'TODO ROSCA ' : ''}(8.8) ${i.sku} DICRO`;
+      return `
+      <div class="product-card group bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-xl p-6 transition-all flex flex-col justify-between"
+        data-diameter="${i.diam}" data-sku="${i.sku}" data-type="${total ? 'total' : 'parcial'}">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="text-[11px] font-mono font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">${i.norma}</span>
+            <span class="text-[11px] font-mono text-slate-500 uppercase">Dicro</span>
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-3 leading-snug">${title}</h3>
+          <div class="text-xs font-mono text-slate-500 space-y-1 mb-6">
+            <div>Diámetro: <span class="text-slate-800">${i.diam}</span></div>
+            <div>Paso: <span class="text-slate-800">${i.paso}</span> · Largo: <span class="text-slate-800">${i.largo} mm</span></div>
+            <div>Tipo Rosca: <span class="text-slate-800">${i.rosca}</span></div>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="font-mono text-slate-400">SKU: ${i.code}</span>
+          <button class="inline-flex items-center gap-1 font-semibold text-primary hover:text-secondary transition-colors"
+            onclick="addToQuote('BULON HEX ${total ? 'TODO ROSCA ' : ''}8.8 ${i.sku} DICRO')" type="button">
+            <span>Cotizá ahora</span>
+            <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>`;
+    }).join('');
+
+    // Tabla
+    document.getElementById('tableBodyRows').innerHTML = catalogDatabase.map(i => `
+      <tr class="hover:bg-slate-50 transition-colors">
+        <td class="py-2.5 px-5 font-medium text-primary">BULON HEX (8.8) ${i.sku}</td>
+        <td class="py-2.5 px-5">${i.diam}</td>
+        <td class="py-2.5 px-5">${i.paso}</td>
+        <td class="py-2.5 px-5">${i.largo} mm</td>
+        <td class="py-2.5 px-5">${i.rosca}</td>
+        <td class="py-2.5 px-5 text-slate-500">${i.norma}</td>
+        <td class="py-2.5 px-5 text-slate-500">${i.acabado}</td>
+        <td class="py-2.5 px-5 text-right font-sans">
+          <button onclick="addToQuote('BULON HEX 8.8 ${i.sku}')" class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-secondary transition-colors" type="button">
+            <span>Cotizar</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </button>
+        </td>
+      </tr>`).join('');
+
+    // Filtros
+    const searchInput = document.getElementById('productSearchInput');
+    const cards = document.querySelectorAll('.product-card');
+    const filterBtns = document.querySelectorAll('#diameterFilters .filter-btn');
+    const typeBtns = document.querySelectorAll('.type-btn');
+    const pillOn = 'filter-btn px-3 py-1 rounded-md bg-primary text-white font-medium transition-all';
+    const pillOff = 'filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all';
+    let currentDiameter = 'all';
+    let currentType = 'all';
+
+    function applyFilters() {
+      const term = (searchInput.value || '').toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(card => {
+        const ok = (currentDiameter === 'all' || card.dataset.diameter === currentDiameter)
+          && (currentType === 'all' || card.dataset.type === currentType)
+          && (!term || card.dataset.sku.toLowerCase().includes(term) || card.querySelector('h3').textContent.toLowerCase().includes(term));
+        card.style.display = ok ? 'flex' : 'none';
+        if (ok) visible++;
+      });
+      document.getElementById('itemCountLabel').innerHTML =
+        `Mostrando <strong class="text-primary font-semibold">${visible}</strong> de ${cards.length} artículos`;
+    }
+
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.className = pillOff);
+      btn.className = pillOn;
+      currentDiameter = btn.dataset.filter;
+      applyFilters();
+    }));
+    typeBtns.forEach(btn => btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.className = 'type-btn text-slate-500 hover:text-primary transition-colors');
+      btn.className = 'type-btn font-semibold text-primary';
+      currentType = btn.dataset.type;
+      applyFilters();
+    }));
+    searchInput.addEventListener('input', applyFilters);
+    applyFilters();
+
+    // Vista grilla / tabla
+    const viewGridBtn = document.getElementById('viewGridBtn');
+    const viewTableBtn = document.getElementById('viewTableBtn');
+    const productTableView = document.getElementById('productTableView');
+    const on = 'p-1 rounded bg-white text-slate-900 shadow-xs transition-all';
+    const off = 'p-1 rounded text-slate-500 hover:text-slate-900 transition-all';
+    function setView(table) {
+      productGrid.classList.toggle('hidden', table);
+      productTableView.classList.toggle('hidden', !table);
+      viewTableBtn.className = table ? on : off;
+      viewGridBtn.className = table ? off : on;
+    }
+    viewTableBtn.addEventListener('click', () => setView(true));
+    viewGridBtn.addEventListener('click', () => setView(false));
+
+    // Cotización por WhatsApp
+    window.addToQuote = function (name) {
+      const text = encodeURIComponent(`Hola Carel SRL, deseo solicitar cotización técnica por el producto: ${name}`);
+      window.open(`https://wa.me/${WA}?text=${text}`, '_blank');
+    };
+
+    // Descarga CSV
+    window.exportTableToCSV = function () {
+      let csv = 'data:text/csv;charset=utf-8,Codigo,Diametro,Paso,Largo_mm,Rosca,Norma,Acabado\n';
+      catalogDatabase.forEach(r => { csv += `${r.sku},${r.diam},"${r.paso}",${r.largo},${r.rosca},${r.norma},${r.acabado}\n`; });
+      const link = document.createElement('a');
+      link.href = encodeURI(csv);
+      link.download = 'Carel_SRL_Bulon_Hexagonal_8.8.csv';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</body>
+
+</html>
