@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bulón hexagonal 8.8 | Carel SRL</title>
+  <title>Productos | Carel SRL</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link
@@ -82,7 +82,7 @@
             class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
           <input
             class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
-            placeholder="Buscar medidas, normas..." type="text">
+            id="header-search" placeholder="Buscar medidas, normas..." type="text">
         </div>
         <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
           href="contacto.html#formulario-contacto">
@@ -102,9 +102,8 @@
           <span class="text-slate-300">/</span>
           <a class="hover:text-primary transition-colors" href="categorias.html">Catálogo</a>
           <span class="text-slate-300">/</span>
-          <a class="hover:text-primary transition-colors" href="subcategorias.html">Bulonería</a>
-          <span class="text-slate-300">/</span>
-          <span class="text-slate-800 font-medium">Bulón hexagonal 8.8</span>
+          <span id="crumb-cat-wrap" class="contents"></span>
+          <span class="text-slate-800 font-medium" id="crumb-last"></span>
         </nav>
       </div>
     </section>
@@ -114,18 +113,17 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div class="lg:col-span-8 flex flex-col items-start gap-4">
-            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Subcategoría Técnica ·
+            <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold"><span id="eyebrow">Catálogo</span> ·
               Fijaciones Industriales</span>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary leading-[1.15]">
-              Bulón hexagonal 8.8
-            </h1>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary leading-[1.15]" id="page-title"></h1>
+            <p class="text-sm text-slate-600 max-w-2xl" id="page-desc"></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== BARRA DE FILTROS ==================== -->
-    <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-border-subtle py-4">
+    <section class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-border-subtle py-4 max-h-[45vh] overflow-y-auto">
       <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div class="flex flex-wrap items-center gap-3 flex-1">
           <div class="relative w-full sm:w-72">
@@ -133,21 +131,11 @@
               class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">tune</span>
             <input
               class="w-full pl-10 pr-3 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
-              id="productSearchInput" placeholder="Filtrar medida (ej. M12-1,25-50)..." type="search">
+              id="productSearchInput" placeholder="Filtrar medida o código (ej. M12-1,25-50)..." type="search">
           </div>
-          <div class="flex items-center gap-1.5 overflow-x-auto py-0.5 text-xs font-mono" id="diameterFilters">
-            <span class="text-slate-400 uppercase tracking-wider pr-1 hidden sm:inline text-[11px]">Diámetro:</span>
-            <button class="filter-btn px-3 py-1 rounded-md bg-primary text-white font-medium transition-all" data-filter="all" type="button">Todos</button>
-            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M8" type="button">M8</button>
-            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M12" type="button">M12</button>
-            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M22" type="button">M22</button>
-            <button class="filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all" data-filter="M24" type="button">M24</button>
-          </div>
-          <div class="hidden lg:flex items-center gap-2 pl-3 border-l border-slate-200 text-xs">
-            <button class="type-btn font-semibold text-primary" data-type="all" type="button">Todo</button>
-            <button class="type-btn text-slate-500 hover:text-primary transition-colors" data-type="total" type="button">Rosca Total</button>
-            <button class="type-btn text-slate-500 hover:text-primary transition-colors" data-type="parcial" type="button">Rosca Parcial</button>
-          </div>
+          <div class="hidden md:flex flex-wrap items-center gap-1.5 py-0.5 text-xs font-mono basis-full" id="diamFilters"></div>
+          <div class="hidden md:flex flex-wrap items-center gap-1.5 py-0.5 text-xs font-mono" id="finishFilters"></div>
+          <div class="hidden md:flex flex-wrap items-center gap-1.5 py-0.5 text-xs font-mono" id="gradeFilters"></div>
         </div>
         <div class="flex items-center justify-between md:justify-end gap-4 text-xs text-slate-500">
           <span class="font-mono" id="itemCountLabel"></span>
@@ -167,12 +155,13 @@
     <section class="py-14 bg-slate-50 border-b border-border-subtle min-h-[600px]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
+        <p class="hidden text-center text-sm text-slate-500 py-16" id="emptyMsg">No encontramos artículos con esos filtros. <a class="font-semibold text-primary hover:text-secondary" id="emptyWa" target="_blank" rel="noopener noreferrer" href="#">Consultanos por WhatsApp</a>.</p>
 
         <div class="hidden bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm" id="productTableView">
           <div class="p-6 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h4 class="text-base font-semibold text-primary">Tabla técnica completa de medidas en stock</h4>
-              <p class="text-xs text-slate-500 mt-0.5">39 dimensiones homologadas con entrega inmediata.</p>
+              <h4 class="text-base font-semibold text-primary">Tabla técnica de medidas</h4>
+              <p class="text-xs text-slate-500 mt-0.5" id="tableSubtitle"></p>
             </div>
             <button
               class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary border border-slate-300 px-3 py-2 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-all"
@@ -185,12 +174,9 @@
             <table class="w-full text-left text-xs">
               <thead class="bg-slate-50 text-slate-500 uppercase font-mono text-[11px] border-b border-slate-200">
                 <tr>
-                  <th class="py-3 px-5">Código / Medida</th>
-                  <th class="py-3 px-5">Diámetro</th>
-                  <th class="py-3 px-5">Paso</th>
-                  <th class="py-3 px-5">Largo</th>
-                  <th class="py-3 px-5">Rosca</th>
-                  <th class="py-3 px-5">Norma</th>
+                  <th class="py-3 px-5">Código</th>
+                  <th class="py-3 px-5">Producto</th>
+                  <th class="py-3 px-5">Grado</th>
                   <th class="py-3 px-5">Acabado</th>
                   <th class="py-3 px-5 text-right">Cotización</th>
                 </tr>
@@ -198,6 +184,12 @@
               <tbody class="divide-y divide-slate-100 text-slate-700 font-mono" id="tableBodyRows"></tbody>
             </table>
           </div>
+        </div>
+        <div class="mt-10 text-center hidden" id="moreWrap">
+          <button class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 bg-white text-slate-700 text-sm font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all" id="moreBtn" type="button">
+            <span>Mostrar más artículos</span>
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </button>
         </div>
       </div>
     </section>
@@ -283,7 +275,7 @@
   </footer>
 
   <!-- Botón WhatsApp Flotante -->
-  <a href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20necesito%20cotizar%20bulones%20hexagonales%20calidad%208.8"
+  <a id="waFloat" href="https://wa.me/541134857763"
     target="_blank" rel="noopener noreferrer"
     class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
     aria-label="Contactar por WhatsApp">
@@ -294,126 +286,139 @@
     </svg>
   </a>
 
+  <script src="data/productos.js"></script>
+  <script src="js/catalogo.js"></script>
   <script>
-    // Base de datos de las 39 medidas
-    const catalogDatabase = [
-      ['M8','1,25',20,'Total'],['M8','1,25',25,'Total'],['M8','1,25',30,'Total'],['M8','1,25',35,'Total'],
-      ['M8','1,25',40,'Total'],['M8','1,25',45,'Total'],['M8','1,25',50,'Parcial'],['M8','1,25',60,'Parcial'],
-      ['M8','1,25',70,'Parcial'],['M8','1,25',80,'Parcial'],['M8','1,25',100,'Total'],['M8','1,25',110,'Total'],
-      ['M8','1,25',120,'Total'],['M12','1,25',25,'Total'],['M12','1,25',30,'Total'],['M12','1,25',35,'Total'],
-      ['M12','1,25',40,'Parcial'],['M12','1,25',50,'Parcial'],['M12','1,25',60,'Parcial'],['M12','1,25',70,'Parcial'],
-      ['M12','1,25',80,'Parcial'],['M12','1,25',90,'Parcial'],['M12','1,25',100,'Parcial'],['M12','1,25',110,'Parcial'],
-      ['M12','1,25',120,'Parcial'],['M12','1,25',130,'Parcial'],['M22','1,5',60,'Parcial'],['M22','1,5',80,'Parcial'],
-      ['M22','1,5',100,'Parcial'],['M22','1,5',120,'Parcial'],['M22','1,5',150,'Parcial'],['M22','1,5',170,'Parcial'],
-      ['M24','2,0',50,'Total'],['M24','2,0',65,'Parcial'],['M24','2,0',80,'Parcial'],['M24','2,0',100,'Parcial'],
-      ['M24','2,0',120,'Parcial'],['M24','2,0',150,'Parcial'],['M24','2,0',170,'Parcial']
-    ].map(([diam, paso, largo, rosca]) => {
-      const total = rosca === 'Total';
-      const pasoSku = paso === '2,0' ? '2' : paso;
-      return {
-        sku: `${diam}-${pasoSku}-${largo}`, diam, paso, largo, rosca,
-        norma: total ? 'DIN 933' : 'DIN 931', acabado: 'DICRO',
-        code: 'CR-88-' + diam.slice(1).padStart(2, '0') + String(largo).padStart(3, '0')
-      };
-    });
+    const { esc } = Carel;
+    const qs = Carel.params();
+    const catName = qs.get('cat') || '';
+    const subName = qs.get('sub') || '';
 
-    const WA = '541134857763';
+    // ---- Universo de productos de esta página ----
+    let base = Carel.ALL;
+    if (catName) base = base.filter(p => p.cat === catName);
+    if (subName) base = base.filter(p => p.sub === subName);
+    const title = subName || catName || (qs.get('q') ? 'Resultados de búsqueda' : 'Todos los productos');
+    const hasSubs = catName && Carel.ALL.some(p => p.cat === catName && p.sub);
 
-    // Grilla de tarjetas
-    const productGrid = document.getElementById('productGrid');
-    productGrid.innerHTML = catalogDatabase.map(i => {
-      const total = i.rosca === 'Total';
-      const title = `BULON HEXAGONAL ${total ? 'TODO ROSCA ' : ''}(8.8) ${i.sku} DICRO`;
-      return `
-      <div class="product-card group bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-xl p-6 transition-all flex flex-col justify-between"
-        data-diameter="${i.diam}" data-sku="${i.sku}" data-type="${total ? 'total' : 'parcial'}">
+    document.title = `${title} | Carel SRL`;
+    document.getElementById('page-title').textContent = title;
+    document.getElementById('crumb-last').textContent = title;
+    document.getElementById('eyebrow').textContent = subName ? 'Subcategoría Técnica' : (catName ? 'Categoría' : 'Catálogo');
+    document.getElementById('page-desc').textContent =
+      `${Carel.articulos(base.length)} disponibles${catName && subName ? ' en ' + catName : ''}. Consultá stock y precio por WhatsApp.`;
+    document.getElementById('crumb-cat-wrap').innerHTML = catName && subName
+      ? `<a class="hover:text-primary transition-colors" href="${esc(Carel.url('subcategorias.html', { cat: catName }))}">${esc(catName)}</a><span class="text-slate-300">/</span>`
+      : '';
+    // Si es una categoría sin subcategorías, "Catálogo" ya es el padre; si solo hay cat, el título es la categoría
+    const waText = `Hola Carel SRL, necesito cotizar ${title.toLowerCase()}`;
+    document.getElementById('waFloat').href = Carel.waLink(waText);
+    document.getElementById('emptyWa').href = Carel.waLink(`Hola Carel SRL, busco una pieza en ${title.toLowerCase()} que no encuentro en el catálogo`);
+
+    // ---- Filtros dinámicos (acabado y grado según lo que existe en esta lista) ----
+    const pillOn = 'filter-btn px-3 py-1 rounded-md bg-primary text-white font-medium transition-all';
+    const pillOff = 'filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all';
+    const distinct = key => [...new Set(base.map(p => p[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es', { numeric: true }));
+    const state = { diam: 'all', acabado: 'all', grado: 'all', term: (qs.get('q') || '').toLowerCase().trim(), shown: 0 };
+    const PAGE = 48;
+
+    function buildPills(boxId, key, label, values, cls) {
+      const box = document.getElementById(boxId);
+      if (values.length < 2) { box.remove(); return; }
+      box.innerHTML = `<span class="text-slate-400 uppercase tracking-wider pr-1 hidden sm:inline text-[11px]">${label}:</span>` +
+        ['all', ...values].map(v => `<button class="${v === 'all' ? pillOn : pillOff}" data-v="${esc(v)}" type="button">${v === 'all' ? 'Todos' : esc(v)}</button>`).join('');
+      box.addEventListener('click', e => {
+        const b = e.target.closest('button[data-v]'); if (!b) return;
+        box.querySelectorAll('button[data-v]').forEach(x => x.className = pillOff);
+        b.className = pillOn;
+        state[key] = b.dataset.v; render(true);
+      });
+    }
+    const diamValues = distinct('diam').sort((a, b) => Carel.diamValue(a) - Carel.diamValue(b));
+    buildPills('diamFilters', 'diam', 'Diámetro', diamValues.length > 1 && base.filter(p => p.diam).length > base.length / 2 ? diamValues : []);
+    buildPills('finishFilters', 'acabado', 'Acabado', distinct('acabado'));
+    buildPills('gradeFilters', 'grado', 'Grado', distinct('grado'));
+    const searchInput = document.getElementById('productSearchInput');
+    searchInput.value = qs.get('q') || '';
+    searchInput.addEventListener('input', () => { state.term = searchInput.value.toLowerCase().trim(); render(true); });
+
+    // ---- Render ----
+    const grid = document.getElementById('productGrid');
+    const tbody = document.getElementById('tableBodyRows');
+    let filtered = [];
+
+    const cardHTML = p => `
+      <div class="product-card group bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-xl p-6 transition-all flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between gap-2 mb-3">
-            <span class="text-[11px] font-mono font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">${i.norma}</span>
-            <span class="text-[11px] font-mono text-slate-500 uppercase">Dicro</span>
+            <span class="text-[11px] font-mono font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">${esc(p.grado || p.sub || p.cat)}</span>
+            <span class="text-[11px] font-mono text-slate-500 uppercase">${esc(p.acabado)}</span>
           </div>
-          <h3 class="text-base font-semibold text-primary mb-3 leading-snug">${title}</h3>
+          <div class="h-28 mb-4 bg-slate-100 rounded-lg flex items-center justify-center overflow-hidden p-2">
+            <img alt="${esc(p.nombre)}" loading="lazy" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" src="${esc(p.img)}" onerror="this.style.display='none'">
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-3 leading-snug">${esc(p.nombre)}</h3>
           <div class="text-xs font-mono text-slate-500 space-y-1 mb-6">
-            <div>Diámetro: <span class="text-slate-800">${i.diam}</span></div>
-            <div>Paso: <span class="text-slate-800">${i.paso}</span> · Largo: <span class="text-slate-800">${i.largo} mm</span></div>
-            <div>Tipo Rosca: <span class="text-slate-800">${i.rosca}</span></div>
+            <div>Categoría: <span class="text-slate-800">${esc(p.sub ? p.cat + ' › ' + p.sub : p.cat)}</span></div>
+            ${p.diam ? `<div>Diámetro: <span class="text-slate-800">${esc(p.diam)}</span></div>` : ''}
+            ${p.grado ? `<div>Grado / calidad: <span class="text-slate-800">${esc(p.grado)}</span></div>` : ''}
+            ${p.acabado ? `<div>Acabado: <span class="text-slate-800">${esc(p.acabado)}</span></div>` : ''}
           </div>
+          ${p.desc ? `<p class="text-xs text-slate-600 leading-relaxed mb-5 line-clamp-4">${esc(p.desc)}</p>` : ''}
         </div>
         <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-          <span class="font-mono text-slate-400">SKU: ${i.code}</span>
-          <button class="inline-flex items-center gap-1 font-semibold text-primary hover:text-secondary transition-colors"
-            onclick="addToQuote('BULON HEX ${total ? 'TODO ROSCA ' : ''}8.8 ${i.sku} DICRO')" type="button">
+          <span class="font-mono text-slate-400">${p.sku ? 'SKU: ' + esc(p.sku) : 'Consultar medidas'}</span>
+          <button class="inline-flex items-center gap-1 font-semibold text-primary hover:text-secondary transition-colors" data-quote="${p.id}" type="button">
             <span>Cotizá ahora</span>
             <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
           </button>
         </div>
       </div>`;
-    }).join('');
 
-    // Tabla
-    document.getElementById('tableBodyRows').innerHTML = catalogDatabase.map(i => `
+    const rowHTML = p => `
       <tr class="hover:bg-slate-50 transition-colors">
-        <td class="py-2.5 px-5 font-medium text-primary">BULON HEX (8.8) ${i.sku}</td>
-        <td class="py-2.5 px-5">${i.diam}</td>
-        <td class="py-2.5 px-5">${i.paso}</td>
-        <td class="py-2.5 px-5">${i.largo} mm</td>
-        <td class="py-2.5 px-5">${i.rosca}</td>
-        <td class="py-2.5 px-5 text-slate-500">${i.norma}</td>
-        <td class="py-2.5 px-5 text-slate-500">${i.acabado}</td>
+        <td class="py-2.5 px-5 text-slate-500">${esc(p.sku || '—')}</td>
+        <td class="py-2.5 px-5 font-medium text-primary">${esc(p.nombre)}</td>
+        <td class="py-2.5 px-5">${esc(p.grado || '—')}</td>
+        <td class="py-2.5 px-5 text-slate-500">${esc(p.acabado || '—')}</td>
         <td class="py-2.5 px-5 text-right font-sans">
-          <button onclick="addToQuote('BULON HEX 8.8 ${i.sku}')" class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-secondary transition-colors" type="button">
+          <button data-quote="${p.id}" class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-secondary transition-colors" type="button">
             <span>Cotizar</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span>
           </button>
         </td>
-      </tr>`).join('');
+      </tr>`;
 
-    // Filtros
-    const searchInput = document.getElementById('productSearchInput');
-    const cards = document.querySelectorAll('.product-card');
-    const filterBtns = document.querySelectorAll('#diameterFilters .filter-btn');
-    const typeBtns = document.querySelectorAll('.type-btn');
-    const pillOn = 'filter-btn px-3 py-1 rounded-md bg-primary text-white font-medium transition-all';
-    const pillOff = 'filter-btn px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-slate-300 transition-all';
-    let currentDiameter = 'all';
-    let currentType = 'all';
-
-    function applyFilters() {
-      const term = (searchInput.value || '').toLowerCase().trim();
-      let visible = 0;
-      cards.forEach(card => {
-        const ok = (currentDiameter === 'all' || card.dataset.diameter === currentDiameter)
-          && (currentType === 'all' || card.dataset.type === currentType)
-          && (!term || card.dataset.sku.toLowerCase().includes(term) || card.querySelector('h3').textContent.toLowerCase().includes(term));
-        card.style.display = ok ? 'flex' : 'none';
-        if (ok) visible++;
-      });
+    function render(reset) {
+      if (reset) {
+        const terms = state.term.split(/\s+/).filter(Boolean);
+        filtered = base.filter(p =>
+          (state.diam === 'all' || p.diam === state.diam) &&
+          (state.acabado === 'all' || p.acabado === state.acabado) &&
+          (state.grado === 'all' || p.grado === state.grado) &&
+          terms.every(t => (p.nombre + ' ' + p.sku + ' ' + p.cat + ' ' + p.sub).toLowerCase().includes(t)));
+        state.shown = 0; grid.innerHTML = ''; tbody.innerHTML = '';
+      }
+      const chunk = filtered.slice(state.shown, state.shown + PAGE);
+      grid.insertAdjacentHTML('beforeend', chunk.map(cardHTML).join(''));
+      tbody.insertAdjacentHTML('beforeend', chunk.map(rowHTML).join(''));
+      state.shown += chunk.length;
       document.getElementById('itemCountLabel').innerHTML =
-        `Mostrando <strong class="text-primary font-semibold">${visible}</strong> de ${cards.length} artículos`;
+        `Mostrando <strong class="text-primary font-semibold">${state.shown}</strong> de ${filtered.length} artículos`;
+      document.getElementById('tableSubtitle').textContent = `${Carel.articulos(filtered.length)} en esta selección.`;
+      document.getElementById('moreWrap').classList.toggle('hidden', state.shown >= filtered.length);
+      document.getElementById('emptyMsg').classList.toggle('hidden', filtered.length > 0);
     }
+    document.getElementById('moreBtn').addEventListener('click', () => render(false));
+    render(true);
 
-    filterBtns.forEach(btn => btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.className = pillOff);
-      btn.className = pillOn;
-      currentDiameter = btn.dataset.filter;
-      applyFilters();
-    }));
-    typeBtns.forEach(btn => btn.addEventListener('click', () => {
-      typeBtns.forEach(b => b.className = 'type-btn text-slate-500 hover:text-primary transition-colors');
-      btn.className = 'type-btn font-semibold text-primary';
-      currentType = btn.dataset.type;
-      applyFilters();
-    }));
-    searchInput.addEventListener('input', applyFilters);
-    applyFilters();
-
-    // Vista grilla / tabla
+    // ---- Vista grilla / tabla ----
     const viewGridBtn = document.getElementById('viewGridBtn');
     const viewTableBtn = document.getElementById('viewTableBtn');
     const productTableView = document.getElementById('productTableView');
     const on = 'p-1 rounded bg-white text-slate-900 shadow-xs transition-all';
     const off = 'p-1 rounded text-slate-500 hover:text-slate-900 transition-all';
     function setView(table) {
-      productGrid.classList.toggle('hidden', table);
+      grid.classList.toggle('hidden', table);
       productTableView.classList.toggle('hidden', !table);
       viewTableBtn.className = table ? on : off;
       viewGridBtn.className = table ? off : on;
@@ -421,22 +426,24 @@
     viewTableBtn.addEventListener('click', () => setView(true));
     viewGridBtn.addEventListener('click', () => setView(false));
 
-    // Cotización por WhatsApp
-    window.addToQuote = function (name) {
-      const text = encodeURIComponent(`Hola Carel SRL, deseo solicitar cotización técnica por el producto: ${name}`);
-      window.open(`https://wa.me/${WA}?text=${text}`, '_blank');
-    };
+    // ---- Cotización por WhatsApp ----
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-quote]'); if (!b) return;
+      const p = Carel.ALL.find(x => String(x.id) === b.dataset.quote);
+      if (p) window.open(Carel.waLink(`Hola Carel SRL, deseo solicitar cotización técnica por el producto: ${p.nombre}${p.sku ? ' (SKU ' + p.sku + ')' : ''}`), '_blank');
+    });
 
-    // Descarga CSV
+    // ---- Descarga CSV (de la selección filtrada) ----
     window.exportTableToCSV = function () {
-      let csv = 'data:text/csv;charset=utf-8,Codigo,Diametro,Paso,Largo_mm,Rosca,Norma,Acabado\n';
-      catalogDatabase.forEach(r => { csv += `${r.sku},${r.diam},"${r.paso}",${r.largo},${r.rosca},${r.norma},${r.acabado}\n`; });
+      const q = v => '"' + String(v || '').replace(/"/g, '""') + '"';
+      const lines = ['SKU,Producto,Categoria,Subcategoria,Grado,Acabado'].concat(
+        filtered.map(p => [p.sku, p.nombre, p.cat, p.sub, p.grado, p.acabado].map(q).join(',')));
+      const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
       const link = document.createElement('a');
-      link.href = encodeURI(csv);
-      link.download = 'Carel_SRL_Bulon_Hexagonal_8.8.csv';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Carel_SRL_' + title.replace(/[^\w]+/g, '_') + '.csv';
+      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
     };
   </script>
 </body>

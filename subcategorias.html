@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bulonería - Catálogo de Productos | Carel SRL</title>
+  <title>Catálogo de Productos | Carel SRL</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link
@@ -94,7 +94,7 @@
             class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">search</span>
           <input
             class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:bg-white transition-colors"
-            placeholder="Buscar medidas, normas..." type="text">
+            id="header-search" placeholder="Buscar medidas, normas..." type="text">
         </div>
         <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
           href="contacto.html#formulario-contacto">
@@ -114,16 +114,16 @@
           <span class="text-slate-300">/</span>
           <a class="hover:text-primary transition-colors" href="categorias.html">Catálogo</a>
           <span class="text-slate-300">/</span>
-          <span class="text-slate-800 font-medium">Bulonería</span>
+          <span class="text-slate-800 font-medium" id="crumb-cat"></span>
         </nav>
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <span class="text-xs font-mono uppercase tracking-widest text-secondary font-semibold">Subcategoría
               Especializada</span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2">Bulonería</h1>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-2" id="page-title"></h1>
           </div>
           <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 text-sm font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all self-start md:self-end"
-            href="https://wa.me/541134857763?text=Hola%20Carel%20SRL,%20deseo%20consultar%20por%20buloner%C3%ADa"
+            id="wa-cat" href="https://wa.me/541134857763"
             rel="noopener noreferrer" target="_blank">
             <span class="material-symbols-outlined text-emerald-600 text-[20px]">chat</span>
             <span>Atención Comercial WhatsApp</span>
@@ -151,7 +151,7 @@
           <span class="text-slate-300">|</span>
           <button class="px-2 py-1 rounded hover:text-slate-900 transition-colors">62</button>
           <span class="text-slate-300">|</span>
-          <button class="px-2 py-1 rounded bg-slate-100 text-slate-900 font-semibold">Todo (7)</button>
+          <button class="px-2 py-1 rounded bg-slate-100 text-slate-900 font-semibold"><span id="total-label">Todo</span></button>
         </div>
       </div>
     </section>
@@ -159,134 +159,7 @@
     <!-- ==================== LISTADO ==================== -->
     <section class="py-16 bg-slate-50 border-b border-border-subtle" id="catalogo">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col gap-3" id="product-list">
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón hexagonal 8.8"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjczdMwrbcL89JorhMFZLpH0XJTywxEUfPJDxgKqQoL_BenWkXPQUuXMkPTUb75udnUGlvWQwYYx2U9XFG4SJGLI7sIv5hHxANHQvhYqsFKvGWi8V9XIfYfbI5mF2DfziJbL74IFQ3ij6CoPM4HShwfGJQ65VuM-bTNIiEM6FbPdycIXAk8kxWOvc8gbyzSPH4CNtzepvQsN_PKq8OKIGtc_iU8PkM3HbMErldt0dly9qge--zvQ">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón hexagonal 8.8 <span class="text-slate-400 font-mono font-medium text-sm">(428)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón hexagonal grado 5"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiPTbrNmSdUQBcOKRgaARN8NRyl7qIACMRC-okO0gWaNkMgADf70wy5xkiNURB3qOPMyM0QlgKbcqZJ8770oQZlnvGHM9R0Ha9dMfx2RAbo4q1KAscORnXNIWohsqPcWK6rGCVFvNmnsNG0KLmPowzuNE7eMOCjkQ8Q0zio2dS2C6zEwzV_mo4NKukY1ZY7GJoBZ9iYe-kNV8jk7N2I6-kPuix9K2FtHmusYMxefTexgHOIyxI80">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón hexagonal grado 5 <span class="text-slate-400 font-mono font-medium text-sm">(395)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón hexagonal grado 2"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcR0WqJfN9qfzPueM3IHu253vpHvN_D5xcB6_RFeX--6qa4lKbcVr1czrPNT5jSU_JEhmQn-RGqHmMXeDK-htsx6SfejSu_qtb4QIwP2b1-9LdKknUB_QnNm3Vj0ypSgwii1wWudjRwynGUNT-jZNz5BQ6uHW0qyGpTt2Z3EXNGFrNwk-hU_HPkRLxuSVg2bsheJpa1KjZ2xU2RrVJLNGhl2oSkBC6m-VF_bv18i01r1UDYqpxaKE">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón hexagonal grado 2 <span class="text-slate-400 font-mono font-medium text-sm">(246)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón cabeza redonda cuello cuadrado"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu41pg8bKyRUTTieNb1WG5jj8pkMmsZh6sxBTwCASB7AFxcIrWaI05fCRddcctGqkwLwiGT-ZnWz2wSEQe6QC4IR5I9GI2nRhdduXPeYr2lTgTK-WeXWDtvXMJ04hPH177t8MGVwV4s_GOz6FSf-ulbfV4pQaIEIBccZhVkLAFl9l7TiAekXOKOnRzjvJREH_Lwaxq0cShHfImoAZWw2mHMViMdVrDtUWiCaJyvQAspQB7ojK7e0c">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón cabeza redonda cuello cuadrado <span class="text-slate-400 font-mono font-medium text-sm">(146)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Prisionero cabeza cuadrada"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Prisionero cabeza cuadrada <span class="text-slate-400 font-mono font-medium text-sm">(9)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón moleteado"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu41pg8bKyRUTTieNb1WG5jj8pkMmsZh6sxBTwCASB7AFxcIrWaI05fCRddcctGqkwLwiGT-ZnWz2wSEQe6QC4IR5I9GI2nRhdduXPeYr2lTgTK-WeXWDtvXMJ04hPH177t8MGVwV4s_GOz6FSf-ulbfV4pQaIEIBccZhVkLAFl9l7TiAekXOKOnRzjvJREH_Lwaxq0cShHfImoAZWw2mHMViMdVrDtUWiCaJyvQAspQB7ojK7e0c">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón moleteado <span class="text-slate-400 font-mono font-medium text-sm">(2)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-          <article
-            class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
-            <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
-              <img alt="Bulón de rueda"
-                class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTQ2wm4ZmvmJb10Sfg4pBXZad3OtEgHseotCfCO23mnuaAYJHDCmChPinkZ_gpvIYnHM7aUBR_MgKHOSGEk76ql37yIt8r87scvW9BOlDVAfVB66VIfZzG8ubK1t0UzcqfqY5I5JRGeAiAstc9u6LZL-XwXkVm5LLscOeE6ifq4B3-jhsCzn7C2q4lJY1m1_0qToE8_pKkZrcWgp6RfYw9f_xgqpGUWbWJMEzl6g0GqD6xE02ZMls0ciNQvC5buxt0Ic">
-            </div>
-            <div class="product-body flex-1 min-w-0 flex items-center">
-              <h2 class="text-base font-semibold text-primary">
-                Bulón de rueda <span class="text-slate-400 font-mono font-medium text-sm">(1)</span>
-              </h2>
-            </div>
-            <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
-              href="productos.html">
-              <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
-              <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-            </a>
-          </article>
-        </div>
+        <div class="flex flex-col gap-3" id="product-list"></div>
 
         <!-- Aviso -->
         <div
@@ -345,7 +218,35 @@
     </svg>
   </a>
 
+    <script src="data/productos.js"></script>
+  <script src="js/catalogo.js"></script>
   <script>
+    const catName = Carel.params().get('cat');
+    const cat = Carel.categories().find(c => c.name === catName);
+    if (!cat) { location.replace('categorias.html'); }
+    else if (!cat.hasSubs) { location.replace(Carel.url('productos.html', { cat: cat.name })); }
+    else {
+      document.title = `${cat.name} - Catálogo de Productos | Carel SRL`;
+      document.getElementById('crumb-cat').textContent = cat.name;
+      document.getElementById('page-title').textContent = cat.name;
+      document.getElementById('total-label').textContent = `Todo (${cat.subs.length})`;
+      document.getElementById('wa-cat').href = Carel.waLink(`Hola Carel SRL, deseo consultar por ${cat.name.toLowerCase()}`);
+      document.getElementById('product-list').innerHTML = cat.subs.map(s => `
+        <article class="product-row group rounded-xl border border-slate-200 hover:border-slate-300 bg-white px-5 py-3 flex flex-row items-center justify-between gap-5 transition-all hover:shadow-md">
+          <div class="product-img w-24 h-16 sm:w-28 sm:h-20 shrink-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-1.5">
+            <img alt="${Carel.esc(s.name)}" loading="lazy" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" src="${Carel.esc(s.img)}">
+          </div>
+          <div class="product-body flex-1 min-w-0 flex items-center">
+            <h2 class="text-base font-semibold text-primary">${Carel.esc(s.name)} <span class="text-slate-400 font-mono font-medium text-sm">(${s.count})</span></h2>
+          </div>
+          <a class="product-link shrink-0 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:text-secondary transition-colors"
+            href="${Carel.url('productos.html', { cat: cat.name, sub: s.name })}">
+            <span class="link-text hidden sm:inline">Ver medidas y tablas</span>
+            <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+          </a>
+        </article>`).join('');
+    }
+
     function setViewMode(mode) {
       const list = document.getElementById('product-list');
       const on = 'p-1 rounded bg-white text-slate-900 shadow-xs transition-all';
